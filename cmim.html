@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conférence Mathématique et Informatique du Mali (CMIM)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055a5;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #003366;
+    }
+  
+    .carousel {
+      width: 80%;
+      overflow: hidden;
+      position: relative;
+      background-color: #003366;
+      margin: 2rem auto;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      animation: slide 20s infinite;
+    }
+
+    .slides img {
+      height: 400px;
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      20%  { transform: translateX(0%); }
+      25%  { transform: translateX(-100%); }
+      45%  { transform: translateX(-100%); }
+      50%  { transform: translateX(-200%); }
+      70%  { transform: translateX(-200%); }
+      75%  { transform: translateX(-300%); }
+      95%  { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #0055a5;
+      padding-bottom: 0.5rem;
+    }
+    
+    .highlight-box {
+      background-color: #f0f8ff;
+      padding: 1rem;
+      border-left: 4px solid #0055a5;
+      margin: 1rem 0;
+    }
+    
+    .objectives {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    
+    .objectives li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .schedule {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    
+    .schedule th, .schedule td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    
+    .schedule th {
+      background-color: #0055a5;
+      color: white;
+    }
+    
+    .schedule tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    .committee {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .committee-card {
+      flex: 1 1 300px;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #003366;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+    }
+    
+    .contact-info i {
+      margin-right: 0.5rem;
+      color: #0055a5;
+    }
+    .btn-inscription {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-inscription:hover {
+      background-color: #45a049;
+    }
+    
+    .alert {
+      background-color: #ff9800;
+      color: white;
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conférence Mathématique et Informatique du Mali (CMIM)</h1>
+    <p>Du 7 au 10 juillet 2025 à la Faculté des Sciences et Techniques (FST), USTTB</p>
+    <p>Célébration conjointe avec la 6ème édition de la Journée Internationale des Mathématiques (JIM)</p>
+  </header>
+
+  <nav>
+    <a href="#presentation">Présentation</a>
+    <a href="#objectifs">Objectifs</a>
+    <a href="#organisation">Organisation</a>
+    <a href="#communications">Communications</a>
+    <a href="#inscription">Inscription</a>
+    <a href="#commissions">Commissions</a>
+    <a href="#contacts">Contacts</a>
+    <a href="#lieu">Lieu</a>
+  </nav>
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="images/conf.jpg" alt="Locaux FST 1">
+      <img src="images/fast.webp" alt="Locaux FST 2">
+      <img src="images/amphifst.jpeg" alt="Locaux FST 3">
+      <img src="images/usstb.jpeg" alt="Locaux FST 4">
+    </div>
+  </div>
+
+  <section id="presentation">
+    <h2>Présentation</h2>
+    <p>Le Département d'Enseignement et de Recherche (DER) de Mathématiques et d'Informatique de la Faculté des Sciences et Techniques (FST) de l'Université des Sciences, des Techniques et des Technologies de Bamako (USTTB) organise la première édition de la Conférence Mathématique et Informatique du Mali (CMIM), conjointement avec la Société Mathématique du Mali (S2M).</p>
+    
+    <div class="highlight-box">
+      <p>Cette conférence fait suite aux journées scientifiques organisées traditionnellement chaque année depuis 2018 (à l'exception de 2020 et 2021 en raison de la pandémie de Covid-19). Elle se tiendra exceptionnellement avec la célébration de la sixième édition de la Journée Internationale des Mathématiques (JIM) placée sous le thème "Mathématiques, art et créativité".</p>
+    </div>
+    
+    <h3>Journée Internationale des Mathématiques (JIM)</h3>
+    <p>Promulguée par l'UNESCO et l'Union Mathématique Internationale (UMI) le 25 novembre 2019, la JIM est célébrée chaque année le 14 mars (3/14 en notation anglo-saxonne, évoquant le nombre π).</p>
+  </section>
+
+  <section id="objectifs">
+    <h2>Objectifs</h2>
+    
+    <div class="objectives">
+      <h3>Objectifs de la CMIM :</h3>
+      <ul>
+        <li>Promouvoir les échanges entre enseignants-chercheurs, doctorants et étudiants sur les avancées récentes en mathématiques et informatique</li>
+        <li>Renforcer la capacité de production scientifique et stimuler l'innovation</li>
+        <li>Vulgariser et valoriser les résultats de recherche auprès des décideurs et du grand public</li>
+        <li>Favoriser l'émergence de projets de recherche interdisciplinaires</li>
+        <li>Susciter l'engouement des jeunes pour les filières scientifiques</li>
+      </ul>
+    </div>
+    
+    <div class="objectives">
+      <h3>Objectifs de la JIM :</h3>
+      <ul>
+        <li>Sensibilisation au rôle essentiel des mathématiques</li>
+        <li>Encouragement de l'apprentissage des mathématiques</li>
+        <li>Célébration de la créativité et de l'esthétique mathématique</li>
+        <li>Favoriser les échanges internationaux et interdisciplinaires</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="organisation">
+    <h2>Organisation</h2>
+    <p>La première édition de la CMIM se tiendra du 7 au 10 juillet 2025 à la Faculté des Sciences et Techniques :</p>
+    <ul>
+      <li><strong>7 juillet :</strong> Journée consacrée à la JIM (concours, ateliers pratiques)</li>
+      <li><strong>8-10 juillet :</strong> Communications scientifiques dans le cadre de la CMIM</li>
+    </ul>
+    
+    <h3>Chronogramme</h3>
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>Activités</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lancement de l'appel à communications</td>
+          <td>29 avril 2025</td>
+        </tr>
+        <tr>
+          <td>Réception des propositions de communications</td>
+          <td>29 avril - 10 juin 2025</td>
+        </tr>
+        <tr>
+          <td>Évaluation des propositions</td>
+          <td>11-16 juin 2025</td>
+        </tr>
+        <tr>
+          <td>Inscription des participants</td>
+          <td>1-5 juillet 2025</td>
+        </tr>
+        <tr>
+          <td>Notification aux candidats</td>
+          <td>1-5 Juillet 2025</td>
+        </tr>
+        <tr>
+          <td>Publication du programme</td>
+          <td>24 juin 2025</td>
+        </tr>
+        <tr>
+          <td>Tenue de la conférence</td>
+          <td>7-10 juillet 2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="communications">
+    <h2>Appel à communications</h2>
+    <p>La CMIM lance un appel à communications à l'intention des enseignants-chercheurs, chercheurs, doctorants et professionnels œuvrant dans les domaines des mathématiques, de l'informatique et des disciplines connexes.</p>
+    
+    <div class="highlight-box">
+      <h3>Modalités de soumission :</h3>
+      <ul>
+        <li>Langues acceptées : français ou anglais</li>
+        <li>Contenu requis :
+          <ul>
+            <li>Titre de la communication</li>
+            <li>Noms et affiliations des auteurs</li>
+            <li>Résumé</li>
+            <li>Mots-clés</li>
+          </ul>
+        </li>
+        <li>Types de contribution :
+          <ul>
+            <li>Présentation orale (20 min + 10 min questions)</li>
+            <li>Poster scientifique</li>
+          </ul>
+        </li>
+        <li>Format : LATEX ou PDF</li>
+        <li>Soumission par email à : <strong>cmim.mali@usttb.edu.ml</strong></li>
+        <li>Date limite : <strong>10 juin 2025</strong></li>
+      </ul>
+    </div>
+  </section>
+
+ 
+  <section id="inscription">
+    <h2>Inscription</h2>
+    
+    <div class="alert">
+      <strong>Les inscriptions sont ouvertes !</strong> Cliquez sur le bouton ci-dessous pour vous inscrire.
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxSEZR-E-R1MFAlU5NipvS-trQUFpL-jLmC-QoJoP5pNsqLg/viewform" class="btn-inscription" target="_blank">
+        S'INSCRIRE MAINTENANT
+      </a>
+    </div>
+    
+    <div class="highlight-box">
+      <h3>Frais d'inscription :</h3>
+      <ul>
+        <li>Enseignants-chercheurs, chercheurs et professionnels : <strong>5 000 FCFA</strong></li>
+        <li>Doctorants et étudiants : <strong>2 000 FCFA</strong></li>
+      </ul>
+      <p>Date limite d'inscription : <strong> 5 juillet 2025</strong></p>
+    </div>
+    
+    <p>La CMIM se tiendra en format hybride (présentiel et visioconférence).</p>
+  </section>
+
+  <section id="commissions">
+    <h2>Commissions</h2>
+    
+    <div class="committee">
+      <div class="committee-card">
+        <h3>Commission scientifique</h3>
+        <p><strong>Président :</strong> Pr Ouaténi DIALLO (USTTB)</p>
+        <p><strong>Membres :</strong></p>
+        <ul>
+          <li>Pr Mahamadou ALASSANE (USTTB)</li>
+          <li>Pr Demba BARRY (USTTB)</li>
+          <li>Pr Mamadou BARRY (UCAD, Dakar)</li>
+          <li>Pr Amadou MAHAMANE (USTTB)</li>
+          <li>Pr Hamadoun MAIGA (USTTB)</li>
+          <li>Pr Boureima SANGARE (UNB, Bobo-Dioulasso)</li>
+          <li>Pr Fana TANGARA (USTTB)</li>
+          <li>Dr Moumouni DIALLO (USSGB)</li>
+          <li>Dr Oumar Y. MAIGA (USTTB)</li>
+          <li>Dr Abdoulaye SAMAKE (USTTB)</li>
+          <li>Dr Harouna SANGARE (USTTB)</li>
+        </ul>
+      </div>
+      
+      <div class="committee-card">
+        <h3>Commission d'organisation</h3>
+        <p><strong>Président :</strong> Pr Demba BARRY (USTTB)</p>
+        <p><strong>Membres :</strong></p>
+        <ul>
+          <li>Dr Aïssata ADAMA (USTTB)</li>
+          <li>Dr Ousmane ALPHA (ENS)</li>
+          <li>Dr Sékou COULIBALY (USSGB)</li>
+          <li>Dr Soumaïla DEMBELE (USTTB)</li>
+          <li>Dr Mahamar DICKO (USTTB)</li>
+          <li>Dr Domion DOUYON (USTTB)</li>
+          <li>Dr Soumana FOMBA (ENI-ABT)</li>
+          <li>Dr Alpha Amadou KEITA (Univ. Ségou)</li>
+          <li>Dr Siaka KONATE (ENETP)</li>
+          <li>Dr Adama Arouna KONE (USTTB)</li>
+          <li>Dr Abdoulaye SAMAKE (USTTB)</li>
+          <li>Dr Chata SANOGO (USTTB)</li>
+          <li>Dr Oumar SOW (USTTB)</li>
+          <li>Dr Tidiane SYLLA (USTTB)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h2>Contacts</h2>
+    <p>Pour toute information complémentaire :</p>
+    
+    <div class="contact-info">
+      <i>📱</i>
+      <div>
+        <strong>Pr Demba BARRY</strong><br>
+        Tél: 76 33 49 49<br>
+        Email: barry.demba@gmail.com
+      </div>
+    </div>
+    
+    <div class="contact-info">
+      <i>📱</i>
+      <div>
+        <strong>Dr Oumar SOW</strong><br>
+        Tél: 94 00 66 84<br>
+        Email: oumarbarou.sow@gmail.com
+      </div>
+    </div>
+    
+    <div class="contact-info">
+      <i>📱</i>
+      <div>
+        <strong>Dr Abdoulaye SAMAKE</strong><br>
+        Tél: 66 85 33 20<br>
+        Email: abdoulaye.samake@usttb.edu.ml
+      </div>
+    </div>
+  </section>
+
+  <section id="lieu">
+    <h2>Lieu de la conférence</h2>
+    <p>La CMIM se tiendra à la Faculté des Sciences et Techniques (FST) de l'Université des Sciences, des Techniques et des Technologies de Bamako (USTTB), située sur le campus de Badalabougou à Bamako.</p>
+    
+    <h3>La Faculté des Sciences et Techniques (FST)</h3>
+    <p>La FST est une composante essentielle de l'USTTB, engagée dans la recherche scientifique de haut niveau dans divers domaines, notamment les mathématiques et l'informatique.</p>
+    
+    <h3>L'Université des Sciences, des Techniques et des Technologies de Bamako (USTTB)</h3>
+    <p>L'USTTB est l'une des principales institutions universitaires du Mali, œuvrant pour l'excellence académique et l'innovation scientifique.</p>
+    
+    <h3>La Société Mathématique du Mali (S2M)</h3>
+    <p>La S2M regroupe les acteurs de la recherche mathématique au Mali et joue un rôle clé dans la promotion des sciences mathématiques.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Conférence Mathématique et Informatique du Mali (CMIM)</p>
+    <p>Organisée par le DER Mathématiques et Informatique de la FST/USTTB et la Société Mathématique du Mali (S2M)</p>
+  </footer>
+</body>
+</html>
